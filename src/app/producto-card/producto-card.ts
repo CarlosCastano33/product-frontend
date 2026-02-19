@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Producto } from '../producto'; // Importamos la interfaz Producto
+import { Producto } from '../model/Producto'; // Importamos la interfaz Producto
 
 @Component({
   selector: 'app-producto-card',

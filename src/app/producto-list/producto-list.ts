@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Producto } from '../producto'; // Importamos la interfaz Producto
+import { Producto } from '../model/Producto'; // Importamos la interfaz Producto
 import { ProductoCardComponent } from '../producto-card/producto-card'; // Importamos el subcomponente
-import { ProductoService } from '../producto.service'; // Importamos el servicio
+import { ProductoService } from '../service/producto.service'; // Importamos el servicio
 
 @Component({
   selector: 'app-producto-list',
