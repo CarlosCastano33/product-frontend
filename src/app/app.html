@@ -2,10 +2,3 @@
 <button (click)="setTitle()">Cambiar nombre</button>
 
 <hr>
-
-<div *ngFor="let p of productos">
-  <h3>{{p.nombre}}</h3>
-  <p>Precio: ${{p.precio}}</p>
-  <img [src]="p.imagenUrl" width="200">
-  <hr>
-</div>

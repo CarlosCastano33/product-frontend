@@ -20,6 +20,10 @@ export class ProductoListComponent implements OnInit {
 
   // Usamos ngOnInit para obtener los datos del servicio
   ngOnInit(): void {
-    this.productos = this.productoService.getProductos();
+    this.productoService.getProductos().subscribe({
+      next: (data) => this.productos = data,
+      error: (err) => console.error('Error al cargar productos', err)
+    });
   }
+  
 }

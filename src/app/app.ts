@@ -11,15 +11,8 @@ import { Producto } from './model/Producto';
   styleUrl: './app.css'
 })
 
-export class App implements OnInit{
+export class App{
   protected title = 'Carlitos';
-  productos: Producto[] = [];
-
-  constructor(private productoService: ProductoService) {}
-
-  ngOnInit(): void {
-    this.productos = this.productoService.getProductos();
-  }
 
   setTitle(){
     this.title = 'El Bueno';
