@@ -1,0 +1,18 @@
+/* Estilos adicionales para el header si es necesario */
+.container {
+    max-width: 1200px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  nav a:hover {
+    transform: translateY(-1px);
+  }
+  
+  button {
+    font-weight: 500;
+  }
+  

@@ -1,0 +1,59 @@
+<header class="bg-blue-600 text-white shadow-lg">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <!-- Logo/Título -->
+        <div class="flex items-center space-x-4">
+          <h1 class="text-xl font-bold">DevSenior Store</h1>
+        </div>
+  
+        <!-- Navegación -->
+        <nav class="flex items-center space-x-6" *ngIf="currentUser">
+          <a routerLink="/products" 
+             routerLinkActive="text-yellow-300" 
+             class="hover:text-yellow-300 transition-colors">
+            Inicio
+          </a>
+          
+          <a routerLink="/products/list" 
+             routerLinkActive="text-yellow-300" 
+             class="hover:text-yellow-300 transition-colors">
+            Ver Productos
+          </a>
+  
+          <!-- Opciones de Admin -->
+          <div *ngIf="isAdmin" class="flex items-center space-x-4">
+            <a routerLink="/products/add" 
+               routerLinkActive="text-yellow-300" 
+               class="hover:text-yellow-300 transition-colors">
+              Agregar Producto
+            </a>
+            
+            <a routerLink="/users" 
+               routerLinkActive="text-yellow-300" 
+               class="hover:text-yellow-300 transition-colors">
+              Ver Usuarios
+            </a>
+          </div>
+        </nav>
+  
+        <!-- Usuario y Logout -->
+        <div class="flex items-center space-x-4">
+          <span *ngIf="currentUser" class="text-sm">
+            Hola, {{ currentUser.username }}
+            <span *ngIf="isAdmin" class="bg-yellow-500 text-black px-2 py-1 rounded text-xs ml-2">
+              ADMIN
+            </span>
+          </span>
+          <button *ngIf="currentUser" (click)="logout()" 
+                  class="bg-red-500 hover:bg-red-600 px-3 py-1 rounded transition-colors">
+            Logout
+          </button>
+          <a *ngIf="!currentUser" routerLink="/login" 
+             class="bg-blue-500 hover:bg-blue-600 px-3 py-1 rounded transition-colors text-white">
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  
